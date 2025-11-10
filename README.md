@@ -31,7 +31,7 @@ An Emby Server plugin that synchronizes tags between Emby and Sonarr for TV show
 ## Configuration
 
 ### Required Settings
-- **Sonarr API URL**: Full URL to your Sonarr API (e.g., `http://localhost:8989/api/v3`)
+- **Sonarr API URL**: Full URL to your Sonarr API (e.g., `http://localhost:8989`)
 - **Sonarr API Key**: Your Sonarr API key (found in Sonarr Settings > General)
 
 ### Optional Settings
