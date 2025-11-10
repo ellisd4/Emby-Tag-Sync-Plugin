@@ -1,0 +1,84 @@
+<div is="emby-scroller" class="page type-interior pluginConfigurationPage embySonarrTagsConfigPage" data-role="page" data-controller="__plugin/configPagejs">
+    <div data-role="content">
+        <div class="content-primary">
+            <form class="embySonarrTagsConfigurationForm">
+                <h2>Emby Tags - Sonarr Integration Settings</h2>
+                
+                <div class="selectContainer">
+                    <label class="selectLabel" for="txtSonarrApiUrl">Sonarr API URL:</label>
+                    <input is="emby-input" type="text" id="txtSonarrApiUrl" name="txtSonarrApiUrl" />
+                    <div class="fieldDescription">Enter the full URL to your Sonarr instance (e.g., https://sonarr.example.com)</div>
+                </div>
+
+                <div class="selectContainer">
+                    <label class="selectLabel" for="txtSonarrApiKey">Sonarr API Key:</label>
+                    <input is="emby-input" type="password" id="txtSonarrApiKey" name="txtSonarrApiKey" />
+                    <div class="fieldDescription">Enter your Sonarr API key (stored securely in Emby database)</div>
+                </div>
+
+                <div class="selectContainer">
+                    <label class="selectLabel" for="txtTagPrefix">Tag Prefix:</label>
+                    <input is="emby-input" type="text" id="txtTagPrefix" name="txtTagPrefix" />
+                    <div class="fieldDescription">Prefix to add to Sonarr tags when syncing to Emby (default: sonarr-)</div>
+                </div>
+
+                <div class="selectContainer">
+                    <label class="selectLabel" for="selectSyncInterval">Sync Interval (hours):</label>
+                    <select is="emby-select" id="selectSyncInterval" name="selectSyncInterval">
+                        <option value="1">1 hour</option>
+                        <option value="6">6 hours</option>
+                        <option value="12">12 hours</option>
+                        <option value="24">24 hours</option>
+                        <option value="48">48 hours</option>
+                        <option value="168">1 week</option>
+                    </select>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input is="emby-checkbox" type="checkbox" id="chkAutoSync" />
+                        <span>Enable Automatic Sync</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">Automatically sync tags at the specified interval</div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input is="emby-checkbox" type="checkbox" id="chkOverwriteExistingTags" />
+                        <span>Overwrite Existing Tags</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">Replace existing tags with Sonarr tags instead of merging</div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input is="emby-checkbox" type="checkbox" id="chkDryRun" />
+                        <span>Dry Run Mode</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">Test mode - shows what would be changed without making actual changes. Check the logs for detailed output.</div>
+                </div>
+
+                <div class="checkboxContainer checkboxContainer-withDescription">
+                    <label>
+                        <input is="emby-checkbox" type="checkbox" id="chkDebugMode" />
+                        <span>Debug Mode</span>
+                    </label>
+                    <div class="fieldDescription checkboxFieldDescription">Enable detailed logging for troubleshooting. Check the logs to see connection details and test results.</div>
+                </div>
+
+                <br />
+                <button is="emby-button" type="submit" class="raised button-submit block">
+                    <span>Save</span>
+                </button>
+
+                <button is="emby-button" type="button" id="btnSyncNow" class="raised block">
+                    <span>Sync Now</span>
+                </button>
+                
+                <div class="fieldDescription" style="margin-top: 20px;">
+                    <strong>Note:</strong> All operations are logged to the Emby server logs. When you click Save, the plugin automatically tests the Sonarr connection. Check the logs for detailed connection test results and sync progress.
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

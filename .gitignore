@@ -98,9 +98,3 @@ ipch/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Playwright MCP files
-.playwright-mcp/
-
-# Base64 temp files
-*.b64

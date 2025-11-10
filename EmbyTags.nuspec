@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>EmbyTags</id>
+    <version>1.0.0</version>
+    <title>Emby Tags</title>
+    <authors>EmbyTags Developer</authors>
+    <owners>EmbyTags Developer</owners>
+    <description>Synchronizes tags between Emby and Sonarr for TV shows</description>
+    <projectUrl>https://github.com/your-username/emby-tags</projectUrl>
+    <iconUrl>https://github.com/your-username/emby-tags/raw/main/icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>emby plugin sonarr tags tv-shows</tags>
+    <language>en-US</language>
+    <frameworkAssemblies>
+      <frameworkAssembly assemblyName="System" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Core" targetFramework="" />
+      <frameworkAssembly assemblyName="System.Net.Http" targetFramework="" />
+    </frameworkAssemblies>
+  </metadata>
+  <files>
+    <file src="bin\Release\netstandard2.0\EmbyTags.dll" target="lib\netstandard2.0\EmbyTags.dll" />
+  </files>
+</package>
